@@ -1,8 +1,5 @@
-NAME=interpret
-FILES=main.c garbage_collector.c scanner.c precedence.c ilist.c parser.c ial.c interpret.c
-CC=gcc
-CFLAGS=-std=c99 -Wall -pedantic  -lm
+compile:
+	cd ./src && make && mv interpret ..
 
-$(NAME): $(FILES)
-	$(CC) $(CFLAGS) $(FILES) -o $@
-
+clean:
+	rm interpret
